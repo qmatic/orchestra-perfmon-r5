@@ -1,0 +1,33 @@
+
+apply plugin: 'war'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+war {
+    baseName = 'perfmon'
+    //version =  '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	compile "org.jolokia:jolokia-core:1.2.2"
+	compile "org.jolokia:jolokia-jsr160:1.2.2"
+	
+	compile "com.googlecode.json-simple:json-simple:1.1.1"
+	
+	providedCompile "javax.servlet:javax.servlet-api:3.0.1"
+}
+
+task explodedWar(type: Copy) {
+    into "$buildDir/exploded/perfmon.war"
+    with war
+}
+
+war.dependsOn explodedWar
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.11'
+}

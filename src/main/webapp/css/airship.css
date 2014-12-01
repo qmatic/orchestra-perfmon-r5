@@ -1,0 +1,574 @@
+/*
+  Theme Name: Airship
+  Theme URI: http://www.airshiptheme.com
+  Description: A simple, responsive theme.
+  Author: Eleventh Edition
+  Author URI: http://www.eleventhedition.com
+  Version: 1.0
+*/
+
+/* Reset & Basics (Inspired by E. Meyers)
+================================================== */
+
+  html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline; }
+  article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block; }
+  body {
+    line-height: 1; }
+  ol, ul {
+    list-style: none; }
+  blockquote, q {
+    quotes: none; }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+    content: '';
+    content: none; }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0; }
+
+  article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {display: block;}
+
+  table { border-collapse: separate; border-spacing: 0; }
+
+  caption, th, td { text-align: left; font-weight: normal; }
+
+  pre, code {font-family: "Menlo", Monaco, Courier, monospace; }
+  pre { white-space: pre; white-space: pre-wrap; white-space: pre-line; word-wrap: break-word; }
+
+  img {-ms-interpolation-mode: bicubic;}
+
+  * { -webkit-tap-highlight-color: #f4f4f4; -webkit-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; }
+
+  ::selection {background: #000000; color: #fff;}
+  ::-moz-selection {background: #000000; color: #fff;}
+
+  :required { -webkit-box-shadow: none; -moz-box-shadow: none; -o-box-shadow: none; -ms-box-shadow: none; box-shadow: none; }
+  :focus {outline: 0;}
+		
+		
+/* Basic Styles
+================================================== */
+
+  html {
+}
+
+  body { 
+    background: #fff;
+    font-size: 100%;
+    line-height: 1.5;
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #646464; 
+    font-weight: 300;
+    margin: 0;
+}
+
+
+/* Images
+================================================== */
+
+  img { 
+    max-width: 100%; 
+    height: auto; }
+
+
+/* Typography
+================================================== */
+
+  h1, h2, h3, h4, h5, h6 { 
+    color: #383838; 
+    font-family: 'Oswald', Arial, sans-serif;
+    font-weight: normal; 
+    font-variant: normal;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1;
+    border-top: 1px solid #d3d3d3; 
+    border-bottom: 1px solid #d3d3d3; 
+    padding: 12px 0; }
+
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+  h1, .h1 { font-size: 1.8em; margin-bottom: 15px; }
+  h2, .h2 { font-size: 1.8em; margin-bottom: 20px; }
+  h3, .h3 { font-size: 1.8em; margin: 30px 0; }
+
+	p { font-size: 1em; font-style: normal; text-align: left; margin: 0 0 15px; }
+	p img { margin: 0; }
+	p.lead { font-size: 1.250em; color: #777; }
+
+	em { font-style: italic; }
+	strong { font-weight: bold; }
+	small { font-size: 80%; }
+
+	blockquote, blockquote p { font-size: 1em; color: #777; font-style: italic; }
+	blockquote { margin: 0 0 20px; padding: 10px 20px 0; }
+	blockquote cite { display: block; font-size: 0.750em; color: #555; }
+	blockquote cite:before { content: "\2014 \0020"; }
+	blockquote cite a, blockquote cite a:visited, blockquote cite a:visited { color: #555; }
+	
+	hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 10px 0 20px; height: 0; }
+
+
+/* Links
+================================================== */
+
+	a, a:visited { color: #000; text-decoration: none; outline: 0; -webkit-transition: color 0.3s ease-out 0s; -moz-transition: color 0.3s ease-out 0s; -o-transition: color 0.3s ease-out 0s; transition: color 0.3s ease-out 0s;  }
+	a:hover, a:focus { color: #1FB4DD; text-decoration: underline; }
+	p a, p a:visited { line-height: inherit; }
+
+
+/* Lists
+================================================== */
+
+	ul, ol { margin-bottom: 20px; }
+	ul { list-style: none outside; }
+	ol { list-style: decimal; }
+	ol, ul.square, ul.circle, ul.disc { margin-left: 30px; }
+	ul.square { list-style: square outside; }
+	ul.circle { list-style: circle outside; }
+	ul.disc { list-style: disc outside; }
+	li { margin-bottom: 10px; }
+
+
+/* Forms and Buttons
+================================================== */
+
+  form * { outline: 0; }
+  form .row { margin-bottom: 0; }
+  form .row div { position: relative; }
+  form .row .columns div { margin-bottom: 20px; }
+
+  input { width: 240px; height: 35px; padding: 0 24px 0 7px; margin: 0; border: 1px solid #d3d4d5; border-top: 1px solid #a7aaad; background: #fffeff; border-right-color: #c2c7ca; border-left-color: #c2c7ca; color: #3a444f;
+    font: 0.938em 'Open Sans', sans-serif; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; position: relative; z-index: 0; }
+  input:focus { -webkit-box-shadow: 0px 0px 2px #1FB4DD; -moz-box-shadow: 0px 0px 2px #1FB4DD; border: 1px solid #1FB4DD; -webkit-transition: all 0.10s ease-in-out; -moz-transition: all 0.10s ease-in-out; }
+  textarea { width: 530px; height: 181px; padding: 7px 24px 0 7px; margin: 0 0 25px; border: 1px solid #d3d4d5; border-top: 1px solid #a7aaad; background: #fffeff; border-right-color: #c2c7ca; border-left-color: #c2c7ca; color: #3a444f; font: 0.938em 'Open Sans', sans-serif; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; position: relative; z-index: 0; vertical-align: bottom; overflow: auto; resize: none; }
+  textarea:focus { border: 1px solid #1FB4DD; box-shadow: 0px 0px 2px #1FB4DD; -webkit-box-shadow: 0px 0px 2px #1FB4DD; -moz-box-shadow: 0px 0px 2px #1FB4DD; transition: all 0.10s ease-in-out; -webkit-transition: all 0.10s ease-in-out; -moz-transition: all 0.10s ease-in-out; }
+  label { position: absolute; top: 6px; left: 9px; z-index: 1; cursor: text; font-size: 0.938em; }
+  .error { color: #1FB4DD; position: relative; font-size: 0.938em; }
+  .thanks { color: #1FB4DD; }
+
+  .button,
+  button,
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"] {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 15px;
+    padding: 10px 20px;
+    background: #13a7d0;
+    background: -moz-linear-gradient(#1FB4DD, #13a7d0) repeat scroll 0 0 #13a7d0;
+    background: -webkit-linear-gradient(#1FB4DD, #13a7d0) repeat scroll 0 0 #13a7d0;
+    background: -o-linear-gradient(#1FB4DD, #13a7d0) repeat scroll 0 0 #13a7d0;
+    background: linear-gradient(#1FB4DD, #13a7d0) repeat scroll 0 0 #13a7d0;
+    border: 1px solid #0c9bc2;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: #FFFFFF !important;
+    display: inline-block;
+    font-weight: normal;
+    text-decoration: none;
+    line-height: 1 !important;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+    margin: 0 0 10px;
+    vertical-align: middle;
+    white-space: nowrap;
+    cursor: pointer; }
+
+  .button:hover,
+  button:hover,
+  input[type="submit"]:hover,
+  input[type="reset"]:hover,
+  input[type="button"]:hover {
+    background: -moz-linear-gradient(#38cbf3, #14a8d1) repeat scroll 0 0 #14a8d1;
+    background: -webkit-linear-gradient(#38cbf3, #14a8d1) repeat scroll 0 0 #14a8d1;
+    background: -o-linear-gradient(#38cbf3, #14a8d1) repeat scroll 0 0 #14a8d1;
+    background: linear-gradient(#38cbf3, #14a8d1) repeat scroll 0 0 #14a8d1;
+    text-decoration: none; }
+
+  .button:active,
+  button:active,
+  input[type="submit"]:active,
+  input[type="reset"]:active,
+  input[type="button"]:active {
+    background: #14a8d1; }
+
+
+/* Menu
+================================================== */
+
+  #main-menu { display: block; text-align: center; border-top: 1px solid #d3d3d3; border-bottom: 1px solid #d3d3d3; margin: 20px auto 0; padding: 12px 0; }
+  #menu { display: block; font-weight: 400; margin: 0 auto; text-align: center; list-style: none; }
+  #menu li { display: inline; border-color: #d3d3d3; border-right: 1px solid #d3d3d3; padding: 0 25px 0; margin: 0; order-top: none; border-bottom: none; }
+  #menu li a, #menu ul li a:visited, #menu ul li a:active { color: #646464; font-size: 1.125em; position: relative; text-decoration: none; }
+  #menu li:first-child { padding-left: 0; }
+  #menu li:last-child { border-right: none; padding-right: 0; }
+  #menu li a:hover, nav ul li a:focus { color: #1FB4DD; }
+  #menu li.current-menu-item a { color: #1FB4DD; }
+  #menu li.current-menu-ancestor a { color: #1FB4DD; }
+
+
+/* Misc
+================================================== */
+
+	.add-top { margin-top: 30px !important; }
+	.add-bottom { margin-bottom: 40px !important; }
+	.remove-top { margin-top: 0 !important; }
+	.remove-bottom { margin-bottom: 0 !important; }
+	.clear { clear: both; }
+	.left { float: left !important; }
+	.right { float: right !important; }
+  .center { text-align: center; }
+  .center p { text-align: center; }
+  .padding { padding: 0 20px; }
+
+
+/* Animation
+================================================== */
+
+  @keyframes fadein {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+  }
+
+  /* Firefox */
+  @-moz-keyframes fadein {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+  }
+
+  /* Safari and Chrome */
+  @-webkit-keyframes fadein {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+  }
+
+  /* Internet Explorer */
+  @-ms-keyframes fadein {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+  }​
+
+  /* Opera */
+  @-o-keyframes fadein {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+  }​
+
+
+/* Website Styles
+================================================== */
+
+  .container { padding: 20px 0; }
+  .container .one-third.column { text-align: center; }
+  .container .one-third.column p { margin: 0 auto 10px; text-align: center; padding: 0 15px; line-height: 1.7; }
+  .section { margin: 30px 0; overflow: hidden; }
+  .hire { position: absolute; top: 0; right: 40px; z-index: 1;}
+  .intro p { font-size: 1.250em; text-align: center; margin: 20px 0 40px; }
+  .page-intro p { font-size: 1.250em; text-align: center; margin: 20px 0; }
+  .main p { font-size: 1.250em; margin: 30px 0; }
+  #logo { text-align: center; float: none; z-index: 2; margin-top: 30px; }
+  #about { margin: 10px 0 0; }
+  #about img:hover { opacity: .8; -webkit-transform: scale(1.05,1.05); -webkit-transition-timing-function: ease-out; -webkit-transition-duration: 350ms; -moz-transform: scale(1.05,1.05); -moz-transition-timing-function: ease-out; -moz-transition-duration: 350ms; }
+  #intro p { font-size: 1.250em; text-align: left; margin: 30px 0; border-bottom: 1px dotted #d3d3d3; padding-bottom: 30px; }
+  #project { margin: 0 0 30px; }
+  #project img { vertical-align: bottom; }
+  #details { margin: 0; overflow: auto; }
+  #details p { line-height: 1.7; }
+  #clients { margin: 10px 0; }
+  #social { margin: 0 0 5px; }
+  #social img:hover { opacity: 0.6; }
+  .quote p { font-size: 1.250em; font-weight: 400; text-align: center; margin: 20px 0 0; }
+  p.by { font-size: 1.1em; font-weight: 600; color: #1fb4dd;  text-align: center; margin: 5px 0; }
+  p.by a { color: #1fb4dd; }
+  .thumbnail { position: relative; overflow: hidden; height: 100%; margin-bottom: 20px !important; -webkit-animation: fadein 2s; -moz-animation: fadein 2s; -ms-animation: fadein 2s; -o-animation: fadein 2s; animation: fadein 2s; }
+  .thumbnail img { vertical-align: bottom; }
+  .thumbnail .details { text-align: center; background-color: #000; color: #fff; opacity: 0; position: absolute; bottom: 0; left: 0; -webkit-transition: 0.25s ease-in; -moz-transition: 0.25s ease-in; -o-transition: 0.25s ease-in; transition: 0.25s ease-in; min-height: 100%; width: 100%; }
+  .no-opacity .thumbnail .details { text-align: center; background: none; height: 100%; width: 100%; top: -9999px; }
+  .thumbnail:hover .details { margin-top: 0; opacity: 0.8; }
+  .thumbnail .details h3, .h3 { color: #fff; font-size: 1.6em; line-height: 1.2; letter-spacing: 0; margin: 0 auto 5px; text-align: center; padding: 100px 0 0; border: none; }
+  .thumbnail .details p { font-size: 1em; text-align: center; line-height: 1.3 !important; }
+  .thumbnail img { opacity: 1; -webkit-transform: scale(1,1); -webkit-transition-timing-function: ease-out; -webkit-transition-duration: 350ms; -moz-transform: scale(1,1); -moz-transition-timing-function: ease-out; -moz-transition-duration: 350ms; }
+  .thumbnail:hover img { opacity: .7; -webkit-transform: scale(1.05,1.05); -webkit-transition-timing-function: ease-out; -webkit-transition-duration: 350ms; -moz-transform: scale(1.05,1.05); -moz-transition-timing-function: ease-out; -moz-transition-duration: 350ms; }
+  .work { margin-bottom: 30px; }
+  .image { margin-top: 10px; }
+  .twitter-follow-button { vertical-align: top; margin: 15px 0 0 20px; }
+  #title { display: none; }
+
+
+/* #Footer
+================================================== */
+
+  #footer { background: url(../airship/images/nav/footer_mast.png) no-repeat; margin: 0 auto 20px; height: 58px;	padding: 20px 24px; }
+  #footer p { float: left; color: #d3d3d3; padding: 10px 0 0 5px; }
+  #footer p a { color: #d3d3d3; }
+  #footer img { float: right; }
+
+
+/* Media Queries
+================================================== */
+
+  /* Standard Desktop */
+  @media only screen and (min-width: 960px) {
+  }
+
+  /* Tablet Portrait */
+  @media only screen and (min-width: 768px) and (max-width: 959px) {
+    input { width: 180px; }
+    textarea { width: 410px; }
+  }
+
+  /* Mobile Portrait */
+  @media only screen and (max-width: 767px) {
+    textarea { width: 250px; }
+    #main-menu { border-bottom: none; padding: 0; }
+    #menu li { display: block; border-bottom: 1px solid #d3d3d3; padding: 8px 0; border-right: none; }
+  }
+
+  /* Mobile Landscape */
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+    textarea { width: 300px; }
+    #main-menu { border-bottom: none; padding: 0; }
+    #menu li { display: block; border-bottom: 1px solid #d3d3d3; padding: 8px 0; border-right: none; }
+  }
+
+  @media screen and (max-width: 860px) {
+    .flex-direction-nav .flex-prev {opacity: 1; left: 0;}
+    .flex-direction-nav .flex-next {opacity: 1; right: 0;}
+  }
+
+
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+/* #Base 960 Grid
+================================================== */
+
+    .container                                  { position: relative; width: 960px; margin: 0 auto; padding: 0; }
+    .container .column,
+    .container .columns                         { float: left; display: inline; margin-left: 10px; margin-right: 10px; }
+    .row                                        { margin-bottom: 10px; }
+
+    /* Nested Column Classes */
+    .column.alpha, .columns.alpha               { margin-left: 0; }
+    .column.omega, .columns.omega               { margin-right: 0; }
+
+    /* Base Grid */
+    .container .one.column,
+    .container .one.columns                     { width: 40px;  }
+    .container .two.columns                     { width: 100px; }
+    .container .three.columns                   { width: 160px; }
+    .container .four.columns                    { width: 220px; }
+    .container .five.columns                    { width: 280px; }
+    .container .six.columns                     { width: 340px; }
+    .container .seven.columns                   { width: 400px; }
+    .container .eight.columns                   { width: 460px; }
+    .container .nine.columns                    { width: 520px; }
+    .container .ten.columns                     { width: 580px; }
+    .container .eleven.columns                  { width: 640px; }
+    .container .twelve.columns                  { width: 700px; }
+    .container .thirteen.columns                { width: 760px; }
+    .container .fourteen.columns                { width: 820px; }
+    .container .fifteen.columns                 { width: 880px; }
+    .container .sixteen.columns                 { width: 940px; }
+
+    .container .one-third.column                { width: 300px; }
+    .container .two-thirds.column               { width: 620px; }
+
+    /* Offsets */
+    .container .offset-by-one                   { padding-left: 60px;  }
+    .container .offset-by-two                   { padding-left: 120px; }
+    .container .offset-by-three                 { padding-left: 180px; }
+    .container .offset-by-four                  { padding-left: 240px; }
+    .container .offset-by-five                  { padding-left: 300px; }
+    .container .offset-by-six                   { padding-left: 360px; }
+    .container .offset-by-seven                 { padding-left: 420px; }
+    .container .offset-by-eight                 { padding-left: 480px; }
+    .container .offset-by-nine                  { padding-left: 540px; }
+    .container .offset-by-ten                   { padding-left: 600px; }
+    .container .offset-by-eleven                { padding-left: 660px; }
+    .container .offset-by-twelve                { padding-left: 720px; }
+    .container .offset-by-thirteen              { padding-left: 780px; }
+    .container .offset-by-fourteen              { padding-left: 840px; }
+    .container .offset-by-fifteen               { padding-left: 900px; }
+
+
+/* #Tablet (Portrait)
+================================================== */
+
+    /* Note: Design for a width of 768px */
+
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
+        .container                                  { width: 768px; }
+        .container .column,
+        .container .columns                         { margin-left: 10px; margin-right: 10px;  }
+        .column.alpha, .columns.alpha               { margin-left: 0; margin-right: 10px; }
+        .column.omega, .columns.omega               { margin-right: 0; margin-left: 10px; }
+        .alpha.omega                                { margin-left: 0; margin-right: 0; }
+
+        .container .one.column,
+        .container .one.columns                     { width: 28px; }
+        .container .two.columns                     { width: 76px; }
+        .container .three.columns                   { width: 124px; }
+        .container .four.columns                    { width: 172px; }
+        .container .five.columns                    { width: 220px; }
+        .container .six.columns                     { width: 268px; }
+        .container .seven.columns                   { width: 316px; }
+        .container .eight.columns                   { width: 364px; }
+        .container .nine.columns                    { width: 412px; }
+        .container .ten.columns                     { width: 460px; }
+        .container .eleven.columns                  { width: 508px; }
+        .container .twelve.columns                  { width: 556px; }
+        .container .thirteen.columns                { width: 604px; }
+        .container .fourteen.columns                { width: 652px; }
+        .container .fifteen.columns                 { width: 700px; }
+        .container .sixteen.columns                 { width: 748px; }
+
+        .container .one-third.column                { width: 236px; }
+        .container .two-thirds.column               { width: 492px; }
+
+        /* Offsets */
+        .container .offset-by-one                   { padding-left: 48px; }
+        .container .offset-by-two                   { padding-left: 96px; }
+        .container .offset-by-three                 { padding-left: 144px; }
+        .container .offset-by-four                  { padding-left: 192px; }
+        .container .offset-by-five                  { padding-left: 240px; }
+        .container .offset-by-six                   { padding-left: 288px; }
+        .container .offset-by-seven                 { padding-left: 336px; }
+        .container .offset-by-eight                 { padding-left: 384px; }
+        .container .offset-by-nine                  { padding-left: 432px; }
+        .container .offset-by-ten                   { padding-left: 480px; }
+        .container .offset-by-eleven                { padding-left: 528px; }
+        .container .offset-by-twelve                { padding-left: 576px; }
+        .container .offset-by-thirteen              { padding-left: 624px; }
+        .container .offset-by-fourteen              { padding-left: 672px; }
+        .container .offset-by-fifteen               { padding-left: 720px; }
+    }
+
+
+/*  #Mobile (Portrait)
+================================================== */
+
+    /* Note: Design for a width of 320px */
+
+    @media only screen and (max-width: 767px) {
+        .container { width: 300px; }
+        .container .columns,
+        .container .column { margin: 0; }
+
+        .container .one.column,
+        .container .one.columns,
+        .container .two.columns,
+        .container .three.columns,
+        .container .four.columns,
+        .container .five.columns,
+        .container .six.columns,
+        .container .seven.columns,
+        .container .eight.columns,
+        .container .nine.columns,
+        .container .ten.columns,
+        .container .eleven.columns,
+        .container .twelve.columns,
+        .container .thirteen.columns,
+        .container .fourteen.columns,
+        .container .fifteen.columns,
+        .container .sixteen.columns,
+        .container .one-third.column,
+        .container .two-thirds.column  { width: 300px; }
+
+        /* Offsets */
+        .container .offset-by-one,
+        .container .offset-by-two,
+        .container .offset-by-three,
+        .container .offset-by-four,
+        .container .offset-by-five,
+        .container .offset-by-six,
+        .container .offset-by-seven,
+        .container .offset-by-eight,
+        .container .offset-by-nine,
+        .container .offset-by-ten,
+        .container .offset-by-eleven,
+        .container .offset-by-twelve,
+        .container .offset-by-thirteen,
+        .container .offset-by-fourteen,
+        .container .offset-by-fifteen { padding-left: 0; }
+    }
+
+
+/* #Mobile (Landscape)
+================================================== */
+
+    /* Note: Design for a width of 480px */
+
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+        .container { width: 420px; }
+        .container .columns,
+        .container .column { margin: 0; }
+
+        .container .one.column,
+        .container .one.columns,
+        .container .two.columns,
+        .container .three.columns,
+        .container .four.columns,
+        .container .five.columns,
+        .container .six.columns,
+        .container .seven.columns,
+        .container .eight.columns,
+        .container .nine.columns,
+        .container .ten.columns,
+        .container .eleven.columns,
+        .container .twelve.columns,
+        .container .thirteen.columns,
+        .container .fourteen.columns,
+        .container .fifteen.columns,
+        .container .sixteen.columns,
+        .container .one-third.column,
+        .container .two-thirds.column { width: 420px; }
+    }
+
+
+/* #Clearing
+================================================== */
+
+    /* Self Clearing Goodness */
+    .container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+    /* Use clearfix class on parent to clear nested columns,
+    or wrap each row of columns in a <div class="row"> */
+    .clearfix:before,
+    .clearfix:after,
+    .row:before,
+    .row:after {
+      content: '\0020';
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0; }
+    .row:after,
+    .clearfix:after {
+      clear: both; }
+    .row,
+    .clearfix {
+      zoom: 1; }
+
+    /* You can also use a <br class="clear" /> to clear columns */
+    .clear {
+      clear: both;
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
